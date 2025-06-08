@@ -2,4 +2,417 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  max-width: 100vw;
+  font-family: var(--main-font, sans-serif);
+  font-size: var(--main-font-size, 18px);
+  background-color: var(--page-color);
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
 }
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  min-height: 668px;
+  min-inline-size: 375px;
+  block-size: 100vh;
+  position: relative;
+}
+
+.recording {
+  position: absolute;
+  text-transform: uppercase;
+  top: 10px;
+  right: 38px;
+  justify-self: end;
+  align-items: start;
+  color: var(--decor-color);
+  font-family: var(--main-font);
+  font-size: var(--main-font-size) ;
+}
+
+/*круг с тенью */
+.recording::after {
+  content: "";
+  position: absolute;
+  margin-inline-start: 10px;
+  margin-block-start: 8px;
+  border-radius: 50%;
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: var(--decor-color);
+  box-shadow: 0px 0px 4px 2px var(--decor-color);
+}
+
+
+/*уголки*/
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+	height: 25px;
+  border-top: 1px solid var(--decorated-zone-color);
+  border-right: 1px solid var(--decorated-zone-color);
+}
+
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 25px;
+	height: 25px;
+  border-bottom: 1px solid var(--decorated-zone-color);
+  border-left: 1px solid var(--decorated-zone-color);
+}
+
+/*меню переключения тем*/
+.header__theme-menu {
+display: grid;
+padding: 75px 10px 65px 0;
+justify-content: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+  color: var(--menu-color);
+  font-family: var(--main-font);
+  font-size: var(--main-font-size);
+  cursor: pointer;
+  outline: none;
+  line-height: 18px;
+  padding: 3px 13px;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--hover-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--decorated-zone-color);
+  pointer-events: none;
+}
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--decorated-zone-color);
+}
+
+
+.header__title {
+  justify-self: start;
+  text-shadow: 4px 4px var(--shadow-color);
+  padding-inline-start: 10px;
+}
+
+.accent {
+  color: var(--title-color);
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-transform: lowercase;
+  line-height: 83%;
+  letter-spacing: 0%;
+}
+
+.header__subtitle {
+  margin: 55px 10px 66px;
+  line-height: 130%;
+  color: var(--subtitle-color);
+  max-width: 355px;
+  font-size: var(--main-font-size);
+  font-weight: 700;
+}
+
+.title-decor {
+  background-color: var(--decor-color);
+}
+
+.main {
+  margin-block-start: 40px;
+  margin-block-end: 40px;
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.section__title {
+  color: var(--section-title-color);
+  font-weight: var(--title-font-weight);
+  font-size: var(--main-font-size);
+  line-height: 23.4px;
+  letter-spacing: 0;
+}
+
+.section__title-subtitle {
+  color: var(--subtitle-color);
+  font-weight: var(--title-font-weight);
+  font-size: var(--main-font-size);
+}
+
+.section__reasons_title{
+  margin-block-start: 50px;
+}
+
+.section__recommendations_title {
+  margin-block-start: 50px;
+}
+.section__title-subtitle {
+  margin-block-end: 20px;
+}
+.article__title {
+  color: var(--subtitle-color);
+  font-weight: var(--title-font-weight);
+  font-size: var(--main-font-size);
+  line-height: 23.4px;
+  letter-spacing: 0;
+}
+
+.article__description {
+  color: var(--description-color);
+  font-weight: var(--description-font-weight);
+  font-size: var(--main-font-size);
+  line-height: 23.4px;
+  letter-spacing: 0;
+  margin-block-start: 10px;
+}
+
+.article__description-link {
+  text-decoration: none;
+  color: var(--description-color);
+  text-shadow: 2px 2px var(--decor-color);
+}
+
+.article__description-link:hover {
+  border-bottom:1px solid  var(--description-color, #f1b2ce);
+}
+
+/*в фокусе убрано подчеркивание ссылки*/
+.article__description-link:focus {
+  outline: none;
+}
+
+.article__description-link:focus-visible {
+  outline: 1px solid var(--description-color);
+}
+
+.recommendations-article__title {
+  font-weight: 400;
+}
+
+.section__gallery {
+  margin-block-start: 50px;
+}
+
+.gallery__item {
+  display: grid;
+  gap: 10px;
+  margin-block-start: 10px;
+}
+
+.gallery__image {
+  display: block;
+  inline-size: 100%;
+  object-position: center;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.footer {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+ position: relative;
+ min-height: 668px;
+}
+
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  text-shadow: 2px 2px var(--footer-shadow-color);
+  font-weight: 700;
+  padding: 0;
+}
+
+/* Планшетная версия*/
+@media (width >= 768px) {
+  .header {
+    min-block-size: 1024px;
+    margin-block-end: 60px;
+  }
+
+ .recording {
+    top: 20px;
+    right: 48px;
+  }
+
+ .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+ .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+ .header__theme-menu {
+   padding: 192px 20px 173px 0;
+  }
+
+ .header__title {
+    padding-inline-start: 0px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__subtitle {
+    max-width: 364px;
+    margin: 162px 20px 183px 384px;
+  }
+
+  .main {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-block-end: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  }
+
+  .section__question {
+    display: grid;
+    grid-template-columns: 236px 1fr;
+    grid-template-rows: repeat(auto-fill, min-content);
+    gap: 20px;
+  }
+
+  .section__question .section__title {
+    grid-column: 1;
+		grid-row: 1 / -1;
+  }
+
+  .section__question  .article {
+		grid-column: 2;
+	}
+
+ .section__reasons {
+  display: grid;
+  grid-template-columns: 1fr;
+  }
+
+ .section__reasons_title {
+   inline-size: 14.75rem;
+   margin-block-start: 0;
+  }
+
+  .section__recommendations {
+    display: grid;
+    grid-template-columns: 236px 1fr;
+    gap: 20px;
+  }
+
+  .section__recommendations .section__recommendations_title {
+    grid-column: 1;
+		grid-row: 1 / -1;
+    margin-block-start: 0;
+  }
+
+   .section__recommendations .article {
+		grid-column: 2;
+	}
+
+  .gallery__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .gallery__image:nth-child(1) {
+    grid-column: 1/3;
+  }
+
+  .gallery__image:nth-child(2) {
+    grid-row: span 2;
+  }
+
+  .gallery__image:nth-child(3) {
+    grid-row: span 2;
+  }
+
+ .gallery__image:nth-child(5) {
+    grid-column: 2 / 4;
+  }
+
+  .section__gallery {
+  margin-block-start: 0;
+}
+
+.gallery__item {
+  margin-block-start: 20px;
+}
+
+ .footer__title {
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+/* Большие экраны  */
+@media (width >= 1024px) {
+  .header {
+    min-height: 768px;
+  }
+
+.header__theme-menu {
+		align-self: start;
+		justify-items: center;
+    padding: 20px 397px 273px 316px;
+	}
+  .header__theme-menu-list {
+		flex-direction: row;
+		gap: 10px;
+	}
+  .header__subtitle {
+    max-width: 491px;
+    margin: 113px 20px 134px 513px ;
+}
+.section__question {
+    grid-template-columns: 315px 1fr;
+  }
+  .section__reasons{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .section__reasons_title {
+    min-width: 315px;
+    grid-column: 1/4;
+    grid-row: 1;
+  }
+  .section__recommendations {
+    grid-template-columns: 315px 1fr;
+  }
+  }
+
