@@ -4,7 +4,7 @@
 */
 :root {
   --bg-image: url("../images/cover-image-dark.png");
-  --page-color: #000028;
+  --bg-color: #000028;
   --title-color: #db00ff;
   --main-font:'IBM Plex mono', sans-serif;
   --subtitle-color: #000028;

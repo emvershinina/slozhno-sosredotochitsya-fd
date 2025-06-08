@@ -10,6 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-image: url("../images/cover-image-light.png");
+  --bg-color: #FFC2E6;
   --title-color: #FFC2E6;
   --decor-color: #FF8DCB;
   --description-color: #353430;
@@ -30,6 +31,7 @@
 
   :root {
   --bg-image: url("../images/cover-image-light.png");
+  --bg-color: #FFC2E6;
   --title-color: #FFC2E6;
   --decor-color: #FF8DCB;
   --description-color: #353430;
@@ -40,6 +42,7 @@
   --section-title-color: #353430;
   --shadow-color: #FF8DCB;
   --footer-shadow-color: #FF0070;
+}
   }
 }
 
