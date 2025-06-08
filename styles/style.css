@@ -115,7 +115,6 @@ justify-content: end;
   border-bottom: 1px solid var(--decorated-zone-color);
 }
 
-
 .header__title {
   justify-self: start;
   text-shadow: 4px 4px var(--shadow-color);
@@ -170,18 +169,17 @@ justify-content: end;
   color: var(--subtitle-color);
   font-weight: var(--title-font-weight);
   font-size: var(--main-font-size);
+  margin-block-end: 20px;
 }
 
-.section__reasons_title{
+.section__reasons_title {
   margin-block-start: 50px;
 }
 
 .section__recommendations_title {
   margin-block-start: 50px;
 }
-.section__title-subtitle {
-  margin-block-end: 20px;
-}
+
 .article__title {
   color: var(--subtitle-color);
   font-weight: var(--title-font-weight);
@@ -350,6 +348,7 @@ justify-content: end;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+    margin-block-start: 20px;
   }
 
   .gallery__image:nth-child(1) {
@@ -370,10 +369,6 @@ justify-content: end;
 
   .section__gallery {
   margin-block-start: 0;
-}
-
-.gallery__item {
-  margin-block-start: 20px;
 }
 
  .footer__title {
@@ -403,7 +398,7 @@ justify-content: end;
 .section__question {
     grid-template-columns: 315px 1fr;
   }
-  .section__reasons{
+  .section__reasons {
     grid-template-columns: 1fr 1fr 1fr;
   }
   .section__reasons_title {
