@@ -11,6 +11,7 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  background-position: bottom center;
 }
 
 .header {
@@ -20,6 +21,8 @@
   min-inline-size: 375px;
   block-size: 100vh;
   position: relative;
+  inline-size: 100%;
+  block-size: 100vh;
 }
 
 .recording {
@@ -241,7 +244,7 @@ justify-content: end;
  display: flex;
  align-items: center;
  justify-content: center;
- height: 100vh;
+ block-size: 100vh;
  position: relative;
  min-height: 668px;
 }
