@@ -258,7 +258,7 @@ justify-content: end;
 /* Планшетная версия*/
 @media (width >= 768px) {
   .header {
-    min-block-size: 1024px;
+    min-height: 1024px;
     margin-block-end: 60px;
   }
 
@@ -368,11 +368,14 @@ justify-content: end;
   }
 
   .section__gallery {
-  margin-block-start: 0;
+    margin-block-start: 0;
+}
+.footer {
+   min-height: 1024px;
 }
 
  .footer__title {
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
@@ -408,6 +411,9 @@ justify-content: end;
   }
   .section__recommendations {
     grid-template-columns: 315px 1fr;
+  }
+  .footer {
+    min-height: 768px;
   }
   }
 
