@@ -215,6 +215,7 @@
 
 .recommendations-article__title {
   font-weight: 400;
+  margin-block-start: 20px;
 }
 
 .section__gallery {
@@ -341,10 +342,6 @@
     grid-column: 2;
   }
 
-  .recommendations-article__title {
-    margin-block-start: 20px;
-  }
-
   .gallery__item {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -391,32 +388,40 @@
     justify-items: center;
     padding: 20px 397px 273px 316px;
   }
+
   .header__theme-menu-list {
     flex-direction: row;
     gap: 10px;
   }
+
   .header__subtitle {
     max-width: 491px;
     margin: 113px 20px 134px 513px;
   }
+
   .section__question {
     grid-template-columns: 32.5% 65%;
     gap: 20px;
   }
+
   .section__reasons {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
   .section__reasons_title {
     min-width: 315px;
     grid-column: 1/4;
     grid-row: 1;
   }
+
   .section__recommendations {
     grid-template-columns: 315px 1fr;
   }
+
   .section__title-subtitle {
     margin-block-end: 0;
   }
+
   .footer {
     min-height: 768px;
   }
