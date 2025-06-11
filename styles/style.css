@@ -388,9 +388,9 @@
   }
 
   .header__theme-menu {
-    align-self: start;
-    justify-items: center;
-    padding: 20px 397px 273px 316px;
+   align-self: start;
+    justify-self: center;
+    padding: 20px 0 273px;
   }
 
   .header__theme-menu-list {
@@ -404,7 +404,7 @@
   }
 
   .section__question {
-    grid-template-columns: 32.5% 65%;
+    grid-template-columns: 315px 1fr;
     gap: 20px;
   }
 
